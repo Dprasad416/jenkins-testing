@@ -10,8 +10,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Hello Durga! Jenkins Pipeline is working!'
-                sh 'echo Building project...'
+                echo 'Hello Durga! Jenkins Pipeline is working'
+                sh 'echo Building project'
             }
         }
     }
