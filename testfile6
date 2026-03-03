@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                echo "Cloning repository..."
+                git branch: 'master', 
+                    url: 'https://github.com/Dprasad416/jenkins-testing.git'
+            }
+        }
+
+        stage('Verify') {
+            steps {
+                echo "Listing files..."
+                sh 'ls -la'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Pipeline test successful!"
+            }
+        }
+    }
+}
